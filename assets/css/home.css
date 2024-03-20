@@ -1,0 +1,261 @@
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif, monospace;
+}
+
+/* ======================CSS Header====================== */
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    
+    
+}
+
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 80px;
+    padding: 0 18px;
+    
+}
+
+#nav > li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a {
+    color: #ed2024;
+}
+
+#nav .subnav li:hover > a {
+    background-color: #ed2024;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+
+#nav {
+    display: inline-block;
+}
+
+#nav .subnav {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* min-width: 160px; */
+    font-size: 13px;
+    border-top: 2px solid #ed2024;
+    text-align: left;
+    
+}
+
+#nav .subnav a {
+    width: 210px;
+    height: 30px;
+    padding: 4px 30px;
+    margin: 4px 12px;
+    line-height: 25px;
+    display: block;
+}
+
+.icon-down {
+    font-size: 12PX;
+}
+
+/* =======================Slider================ */
+
+#slider {
+    height: 500px;
+    margin-top: 80px;
+    /* padding-top: 50%; */
+    background: url(/assets/img/img-home/backgroundHome-a220fcabb9f9cdbe002796c3d2b03d7c.png) top center / cover no-repeat;
+}
+
+
+/* =====================Content================= */
+
+/* ===============promotion===================== */
+#content .content-promotion {
+    height: 700px;
+    padding: 98px 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000;
+    color: #fff;
+
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#content .content-promotion .promotion-desc{
+    text-align: left;
+    height: 620px;
+    width: 50%;
+    
+}
+
+
+#content .heading-promotion {
+    font-size: 36px;
+    margin-bottom: 18px;
+    
+}
+
+#content .heading-sub {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+#content .desc {
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    
+}
+
+
+
+#content .content-promotion .promotion-img {
+    width: 40%;
+    height: 620px;
+    background: url(/assets/img/img-home/VN_LUNCH-87cd6bd1327f6a8d96e8cc7471a54845.jpg) center top / cover no-repeat;
+    margin: 2px 2%
+}
+
+/* =======================About================= */
+
+#content #about {
+    background: url(/assets/img/img-home/backgroundElGauCho-8889b57ec1892cf7ab80ecbe6c2fabad.png) center top / cover no-repeat;
+
+}
+#content .content-about-us {
+    height: 900px;
+    padding: 98px 2%;
+    margin-left: auto;
+    margin-right: auto;  
+    background-color: rgba(0, 0, 0, 0.6);  
+    color: #fff;
+    
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#content .content-about-us .about-desc{
+    text-align: left;
+    height: 620px;
+    width: 50%;
+    
+}
+
+#content .about-heading {
+    font-size: 36px;
+    margin-bottom: 18px;
+    
+}
+
+#content .about-sub-heading {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+#content .about-text {
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    
+}
+
+#content .content-about-us .about-img {
+    width: 40%;
+    height: 860px;
+    background: url(/assets/img/img-home/Family\ collage-01-e3c8aa144bacbc21a369bde774bb3db0.png) center top / cover no-repeat;
+    margin: 2px 2%
+}
+
+/* =========================="content-location"================ */
+
+#content .content-location {
+    padding: 50px 2%;
+    height: 800px;
+    background-color: #000;
+    color: #fff;
+}
+
+#content .content-location .location-img {
+    margin-top: 20px;
+    height: 60%;
+    width: 80%;
+    align-items: center;
+    
+}
+
+#content .location-text .location-heading {
+    font-size: 36px;
+}
+
+
+.content-location .location-text {
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+.content-location .location-text .sub-heading {
+    font-size: 24px;
+    font-weight: 200;
+    padding: 10px 10px;
+}
+
+.content-location .location-text p{
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.content-location .btn {
+    width: 200px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: #ed2024 solid 1px;
+    color: #ed2024;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
