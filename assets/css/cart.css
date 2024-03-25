@@ -1,0 +1,62 @@
+/* <====================| RESET CSS |=====================> */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+
+/* <====================| CONTENT-CART |=====================> */
+#content-cart {
+    margin-top: 100px;
+}
+
+.item {
+    font-size: 15px;
+}
+
+.item_mount {
+    height: 110px;
+    width: 115px;
+    
+    
+}
+
+.item_mount button {
+    height: 30px;
+    width: 32px;
+    line-height: 10px;
+
+    
+}
+
+.item_mount input {
+    height: 30px;
+    width: 40px;
+    line-height: 10px;
+    text-align: center;
+}
+
+.paddingbangcom {
+    width: 510px;
+}
+
+.paddingbangcom2 {
+    width: 300px;
+}
+
+.total {
+    color: #ed2024;
+    font-weight: 700;
+}
+
+.btn-checkout {
+    background-color: #ed2024;
+    color: #fff;
+    
+}
+
