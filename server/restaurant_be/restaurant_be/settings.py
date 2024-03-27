@@ -77,9 +77,12 @@ WSGI_APPLICATION = 'restaurant_be.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "restaurant",
+        "USER": "root",
+        "PASSWORD": "123456", #local 20521319
+        "HOST": "127.0.0.1",
     }
 }
 

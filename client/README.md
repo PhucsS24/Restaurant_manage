@@ -19,5 +19,5 @@ I.	Các chức năng chính:
 
 II.	Frameword
 1.	Front-end Bootstrap: HTML, CSS, JavaScript
-2.	Back-end: Javaspringboot
+2.	Back-end: Django
 
