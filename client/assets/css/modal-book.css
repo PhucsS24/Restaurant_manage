@@ -1,64 +1,42 @@
-
-.modal-book {
-    
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    /* display: none; */
-
+/* <====================| RESET CSS |=====================> */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.modal-container {
-    background-color: rgba(0, 0, 0, 0.09);
-    width: 1250px;
-    max-width: calc(100%-32);
-    min-height: 300px;
-    position: relative;
+html {
+    font-family: sans-serif;
 }
 
-.modal-header {
-    height: 56px;
-    /* background-color: rgba(0, 0, 0, 0.1); */
-    color: #fff;
-    /* căn giữa */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* <====================| FORM BOOK |=====================> */
+#slider .book-heading{
+    font-size: 36px;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+#slider .icon-book{
+    margin-right: 8px;
     font-size: 30px;
-    
+}
+
+#slider .icon{
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: 26px;
+    color: #000000;
+    font-weight: 800;
 }
 
 
-.icon-note {
-    margin-right: 16px;
+#slider .book-table-form .valid{
+    font-size: 20px;
+    text-align: left;
 }
 
-.modal-close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #ed2024;
-    font-size: 18px;
-    font-weight: 900;
-    padding: 12px 12px;
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.modal-close:hover {
-    color: #fff;
-    background-color: #ed2024;
-    border-radius: 5px solid ;
-    
-}
-
-.modal-body {
-    padding: 18px;
-    
+#slider .btn-submit{
+    height: 45px;
+    margin-left: 522px;
+    width: 590px;
 }
