@@ -25,7 +25,7 @@ def register(request):
             'last_name': user.last_name
         }})
 
-@api_view(['POST'])
+@api_view(['GET'])
 def login(request):
     email_or_phone = request.data.get('email_phone')
     password = request.data.get('password')
@@ -41,8 +41,8 @@ def login(request):
             user = User.objects.get(email=email_or_phone)
         except User.DoesNotExist:
             return Response({"message": "Thông tin đăng nhập không hợp lệ."}, status=status.HTTP_401_UNAUTHORIZED)
-    if user.password!=password:
-        return Response({"message": "Thông tin đăng nhập không hợp lệ."}, status=status.HTTP_401_UNAUTHORIZED)
+    if not user.check_password(password):
+        return Response({"message": "Thông tin đăng nhập không hợp lệxxx."}, status=status.HTTP_401_UNAUTHORIZED)
     refresh = RefreshToken.for_user(user)
     return Response({
         'refresh': str(refresh),
