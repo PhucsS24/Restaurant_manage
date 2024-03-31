@@ -29,13 +29,21 @@ from .models import User
 
 @api_view(['POST'])
 def login(request):
-    email = request.data.get('email')
-    phone = request.data.get('phone')
-    if email is None or phone is None:
-        return Response({"message": "Email và phone là bắt buộc."}, status=status.HTTP_400_BAD_REQUEST)
-    try:
-        user = User.objects.get(email=email, phone=phone)
-    except User.DoesNotExist:
+    email_or_phone = request.data.get('email_phone')
+    password = request.data.get('password')
+    if email_or_phone is None or password is None:
+        return Response({"message": "Email/phone và password là bắt buộc."}, status=status.HTTP_400_BAD_REQUEST)
+    if isinstance(email_or_phone, int):
+        try:
+            user = User.objects.get(phone=email_or_phone)
+        except User.DoesNotExist:
+            return Response({"message": "Thông tin đăng nhập không hợp lệ."}, status=status.HTTP_401_UNAUTHORIZED)
+    else:
+        try:
+            user = User.objects.get(email=email_or_phone)
+        except User.DoesNotExist:
+            return Response({"message": "Thông tin đăng nhập không hợp lệ."}, status=status.HTTP_401_UNAUTHORIZED)
+    if user.password!=password:
         return Response({"message": "Thông tin đăng nhập không hợp lệ."}, status=status.HTTP_401_UNAUTHORIZED)
     refresh = RefreshToken.for_user(user)
     return Response({
@@ -49,4 +57,6 @@ def login(request):
             'last_name': user.last_name
         }
     })
+
+
 
