@@ -2,7 +2,11 @@ from django.shortcuts import render
 from django.contrib.auth.hashers import check_password, make_password
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import status
+from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserSerializer
+from .models import User
+
 
 # Create your views here.
 @api_view(['POST'])
@@ -20,12 +24,6 @@ def register(request):
             'first_name': user.first_name,
             'last_name': user.last_name
         }})
-
-
-
-from rest_framework import status
-from rest_framework_simplejwt.tokens import RefreshToken
-from .models import User
 
 @api_view(['POST'])
 def login(request):
