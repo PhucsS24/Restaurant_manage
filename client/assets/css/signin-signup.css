@@ -1,44 +1,120 @@
-#container {
-  width: 300px;
-  margin: 20px auto;
-  background-color:white;
-  height: 500px;
-  border-radius: 50px;
-  padding: 25px;
-  border: 5px solid black;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
+
+.background_img {
+  background: url(/assets/img/img-home/backgroundElGauCho-8889b57ec1892cf7ab80ecbe6c2fabad.png) top center /cover no-repeat ;
+  height: 830px;
+  padding-bottom: 0px;
+  
+}
+
+.bg_opacity {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 830px;
+}
+
+.signup-box {
+  width: 500px;
+  height: 700px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+}
+.login-box {
+  width: 360px;
+  height: 360px;
+  margin: auto;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.form-lable{
+  font-size: 16px;
+}
+
+#form_signup {
+  align-items: center;
+  width: 460px;
+}
+
+
+
 
 h1 {
   text-align: center;
-  font-family: monospace;
-  font-size: 200%;
+  padding-top: 15px;
 }
-
-.label {
-  font-size: 15px;
-  font-family: Courier;
-  font-weight: bold;
+h4 {
+  text-align: center;
+  font-size: 18px;
 }
-
-input {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 95%;
-  height: 20px;
-  padding: 5px;
-  box-shadow: 0 0 15px rgba(0,0, 0, 0.3);
-  border-radius: 10px;
+form {
+  width: 300px;
+  margin-left: 20px;
 }
-
-button {
-  background-color: red;
-  padding: 5px;
-  margin-top: 15px;
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
+form input {
   width: 100%;
-  height: 40px;
-  border-radius: 50px;
-  box-shadow: 0 0 15px yellow;
-  font-weight: bold;
-  font-size: 15px;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* input[type="button"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #ed2024;
   color: white;
+  font-size: 18px;
+} */
+
+.submit_signup {
+  width: 460px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 2px;
+  border: none;
+  background-color: #ed2024;
+  color: white;
+  font-size: 18px;
+}
+
+.submit_signin {
+  width: 300px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 2px;
+  border: none;
+  background-color: #ed2024;
+  color: white;
+  font-size: 18px;
+}
+
+
+p {
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  color: #fff;
+}
+.para-2 {
+  text-align: center;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #10e3c0;
 }
