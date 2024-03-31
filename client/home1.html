@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/home-book-modal.css">
+    <link rel="stylesheet" href="assets/css/modal-book.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     
     <title>Home</title>
 
@@ -22,11 +24,11 @@
             <ul id="nav">
                 <li><a href="">Home</a></li>
     
-                <li><a href="">Menu
+                <li><a href="menu-food.html">Menu
                     <i class="icon icon-down ti-angle-down"></i>
                 </a>
                     <ul class="subnav">
-                        <li><a href="">FOOD</a></li>
+                        <li><a href="menu-food.html">FOOD</a></li>
                         <li><a href="">DINKS</a></li>
                         <li><a href="">WINES</a></li>
                         <li><a href="">LUNCH</a></li>
@@ -42,10 +44,10 @@
                     <i class="icon icon-down ti-angle-down"></i>
                 </a>
                 <ul class="subnav">
-                    <li><a href="">All location</a></li>
+                    <li><a href="all_location.html">All location</a></li>
                     <li><a href="">Ha Noi</a></li>
-                    <li><a href="">HCM</a></li>
-                    <li><a href="">Da Nang</a></li>
+                    <li><a href="hcm.html">HCM</a></li>
+                    <li><a href="danang.html">Da Nang</a></li>
                 </ul>
                 </li>
     
@@ -80,9 +82,165 @@
         <div id="slider">
             <div class="background">
                 <div class="book-table">
-                    <p class="sologan">Embark on a journey of culinary delight at our restaurant</p>
-                    <p class="sologan">where every meal becomes an adventure filled with creativity and excitement!</p>
-                    <button class="btn-book">Book Now</button>
+                    <div class="sloder-text collapse show" id="demo">
+                        <p class="sologan " >Embark on a journey of culinary delight at our restaurant</p>
+                        <p class="sologan " >where every meal becomes an adventure filled with creativity and excitement!</p>
+                    </div>
+
+                    <!-- Form -BOOK-table -->
+                    <div class="book-table-form collapse m-3" id="demo">
+                        <h1 class="book-heading"><i class="icon-book ti-notepad"></i><b>BOOK A TABLE</b></h1>
+
+                        <!-- row 1 -->
+                        <div class="row line1">
+                            <!-- Select location -->
+                            <div class="col valid">
+                                <form action="/action_page.php" class="was-validated" method="post">
+                                    <div class="mb-1 mt-1 d-flex">
+                                        <select name="" id="select-location" aria-placeholder="Restaurant" class="modal-select form-select form-select-lg" >
+                                            <option value="HaNoi">Restaurant location</option>
+                                            <option value="HaNoi">Trang Tien, Hoan Kiem | Hanoi</option>
+                                            <option value="HaNoi">Phu My Hung, D7 | HCMC</option>
+                                            <option value="HaNoi">An Hai Tay, Son Tra | Danang</option>
+                                        </select>
+                                        <i class="icon ti-location-pin" ></i>
+                                        
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- select size -->
+                            <div class="col valid">
+                                <form action="/action_page.php" class="was-validated">
+                                    <div class="mb-1 mt-1 d-flex">
+                                         
+                                        <select name="" id="party-size" class="modal-select form-select form-select-lg" aria-placeholder="party-size" >
+                                            <option value="prity-size">Prity Size</option>
+                                            <option value="HaNoi">1</option>
+                                            <option value="HaNoi">2</option>
+                                            <option value="HaNoi">3</option>
+                                            <option value="HaNoi">4</option>
+                                            <option value="HaNoi">5</option>
+                                            <option value="HaNoi">6</option>
+                                            <option value="HaNoi">7</option>
+                                            <option value="HaNoi">8</option>
+                                            <option value="HaNoi">9</option>
+                                            <option value="HaNoi">10</option>
+                                            <option value="HaNoi">11</option>
+                                            <option value="HaNoi">12</option>
+                                        </select>
+                                        
+                                        <i class="icon ti-user"></i>  
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Select date -->
+                            <div class="col valid">
+                                <form action="/action_page.php" class="was-validated">
+                                    <div class="mb-1 mt-1">   
+                                        <input type="date" class="form-control form-control-lg date" id="date" name="date" required>
+                                        <div class="valid-feedback check-valid" ></div>
+                                        <div class="invalid-feedback check-valid">Please fill out this field.</div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Select time -->
+                            <div class="col valid">
+                                <form action="/action_page.php" class="was-validated">
+                                    <div class="mb-1 mt-1" >   
+                                        <input type="time" class="form-control form-control-lg time" id="time"  name="time" required>
+                                        <div class="valid-feedback check-valid"></div>
+                                        <div class="invalid-feedback check-valid">Please fill out this field.</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+
+                        <!-- row 2 -->
+                        <div class="row line2">
+                            <!-- first name -->
+                            <div class="col-3 valid">
+                                <form action="/action_page.php" class="was-validated">
+                                    <div class="mb-1 mt-1">   
+                                        <input type="text" class="form-control form-control-lg info" id="fname" placeholder="Enter first name" name="fname" required>
+                                        <div class="valid-feedback check-valid"></div>
+                                        <div class="invalid-feedback check-valid">Please fill out this field.</div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- last name -->
+                            <div class="col-3 valid">
+                                <form action="/action_page.php" class="was-validated">
+                                    <div class="mb-1 mt-1">   
+                                        <input type="text" class="form-control form-control-lg info" id="lname" placeholder="Enter last name" name="lname" required>
+                                        <div class="valid-feedback check-valid"></div>
+                                        <div class="invalid-feedback check-valid">Please fill out this field.</div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- phone -->
+                            <div class="col-3 valid">
+                                <form action="/action_page.php" class="was-validated">
+                                    <div class="mb-1 mt-1">   
+                                        <input type="tel" class="form-control form-control-lg info" id="phone" placeholder="Phone" name="phone" required>
+                                        <div class="valid-feedback check-valid" ></div>
+                                        <div class="invalid-feedback check-valid">Please fill out this field.</div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-3 valid">
+                                <form action="/action_page.php" class="was-validated">
+                                    <div class="mb-1 mt-1" >   
+                                        <input type="email" class="form-control form-control-lg info" id="email" placeholder="Email" name="email" required>
+                                        <div class="valid-feedback check-valid"></div>
+                                        <div class="invalid-feedback check-valid">Please fill out this field.</div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <!--  -->
+                        <div class="row line3 mt-1">
+                            <div class="col-12 valid">
+                                <form action="/action_page.php" class="was-validated ">
+                                    <div class="mb-2 mt-1 d-flex">
+                                        <select name="" id="select-party" aria-placeholder="Choose party size" class="modal-select form-select form-select-lg" >
+                                            <option value="Birthday">Birthday</option>
+                                            <option value="Anniversary">Anniversary</option>
+                                            <option value="Bussiness">Bussiness Meeting</option>
+                                            <option value="Party">Party</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <!-- <i class="icon ti-location-pin" ></i> -->
+                                        
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="row mt-2">
+                            <div class="col">
+                                <textarea class="mb-1 mt-1 form-control" name="note" id="note"  rows="3" placeholder="*Note"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <button type="button" class="btn-book btn collapse show" id="booknowbtn" onclick="display_submit()" data-bs-toggle="collapse" data-bs-target="#demo" >Book Now</button>
+                    
+                    <button type="button" class="btn-book btn-submit btn" id="submitbtn" style="display: none; " >Submit</button>
+
                 </div>
 
                 
@@ -258,129 +416,10 @@
         </footer>
 
     </div>
-
-    <div class="modal open">
-        <div class="modal-container">
-
-            <!-- btn close -->
-            <div class="modal-close">
-                <i class="ti-close"></i>
-            </div>
-
-            <!-- Header -->
-            <header class="modal-header">
-                <i class="icon-note ti-notepad"></i>
-                BOOK A TABLE
-            </header>
-
-            <!-- Body -->
-            <div class="modal-body">
-
-                <div class="clearfix">
-                      
-                    <!-- input 1 -->
-                    <!-- <label for="select-location" class="modal-label">
-                        <i class="icon-location ti-location-pin" ></i>
-                        Restaurant
-                    </label> -->
-                    <select name="" id="select-location" aria-placeholder="Restaurant" class="modal-select">
-                        <option value="HaNoi">Restaurant</option>
-                        <option value="HaNoi">Trang Tien, Hoan Kiem | Hanoi</option>
-                        <option value="HaNoi">Phu My Hung, D7 | HCMC</option>
-                        <option value="HaNoi">An Hai Tay, Son Tra | Danang</option>
-                    </select>
+    <script src="assets/js/bookevent.js"></script>
 
 
-                    <!-- input 2 -->
-                    <!-- <label for="party-size" class="modal-label">
-                        <i class="icon-user ti-user"></i>
-                        Prity Size
-                    </label> -->
-                    <select name="" id="party-size" class="modal-select" aria-placeholder="Restaurant">
-                        <option value="prity-size">Prity Size</option>
-                        <option value="HaNoi">1</option>
-                        <option value="HaNoi">2</option>
-                        <option value="HaNoi">3</option>
-                        <option value="HaNoi">4</option>
-                        <option value="HaNoi">5</option>
-                        <option value="HaNoi">6</option>
-                        <option value="HaNoi">7</option>
-                        <option value="HaNoi">8</option>
-                        <option value="HaNoi">9</option>
-                        <option value="HaNoi">10</option>
-                        <option value="HaNoi">11</option>
-                        <option value="HaNoi">12</option>
-                    </select>
-
-                
-                    <!-- input 3 -->
-                    <!-- <label for="date" class="modal-label">
-                        <i class="icon-date ti-calendar"></i>
-                        Date
-                    </label> -->
-                    <input type="date" id="date" name="date" class="modal-input" placeholder="">
-                    
-                    <!-- input 4 -->
-                    <!-- <label for="time" class="modal-label">
-                        <i class="icon-time ti-timer"></i>
-                        Time
-                    </label> -->
-                    <input type="time" id="time" name="time" class="modal-input">                   
-                </div>
-
-                <div class="clearfix">
-                    <!-- input 5 -->
-                    <label for="fname" class="modal-label"></label>
-                    <input type="text" id="fname" name="fname" class="modal-input" placeholder="First Name">
-
-                    <!-- input 6 -->
-                    <label for="lname" class="modal-label"></label>
-                    <input type="text" id="lname" name="lname" class="modal-input" placeholder="Last Name">
-
-                    <!-- input 7 -->
-                    <label for="phone" class="modal-label"></label>
-                    <input type="tel" id="phone" name="phone" class="modal-input" placeholder="Phone">  
-
-                    <!-- input 8 -->
-                    <label for="email" class="modal-label"></label>
-                    <input type="email" id="email" name="email" class="modal-input" placeholder="Email">
-                
-                </div>
-
-                <div class="clearfix">
-                    <!-- input 9 -->
-                    <label for="note" class="modal-label"></label>
-                    <textarea name="note" id="note" placeholder="Note"></textarea>
-                </div>
-
-                <button id="btn-submit" class="js-book">
-                    Submit
-                    <i class="icon-check ti-check" ></i>
-                </button>
-               
-                <footer class="modal-footer">
-                    <p >Need <a href="" class="modal-help">help?</a></p>
-                </footer>
-
-            </div>
-        </div>
-    </div>
-
-    <script>
-        
-        const bookBtns = document.querySelectorAll('.js-book')
-        const modal = document.querySelector('.modal')
-
-        function showbooktable() {
-            modal.classList.add('open')
-        }
-
-        
-        for (const bookBtn of bookBtns) {
-            bookBtn.addEventListener("click", showbooktable)
-        }
-    </script>
-
+    
 
 </body>
 </html>
